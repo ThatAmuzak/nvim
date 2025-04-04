@@ -14,3 +14,9 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.smartindent = true
 vim.wo.signcolumn = "yes"
+vim.api.nvim_create_autocmd("TextYankPost", {
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({ timeout = 200 })
+	end,
+})

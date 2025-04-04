@@ -26,4 +26,5 @@ require("lazy").setup({
 	require("plugins.surround"),
 	require("plugins.which-key"),
 	require("plugins.lazygit"),
+	require("plugins.ibl"),
 })

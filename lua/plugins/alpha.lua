@@ -41,6 +41,6 @@ return {
 		}
 		vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#2BC6FF", bold = true })
 		alpha.setup(dashboard.opts)
-		-- require("alpha").setup(require("alpha.themes.dashboard").config)
+		vim.keymap.set("n", "<leader>a", "<Cmd>Alpha<CR>")
 	end,
 }

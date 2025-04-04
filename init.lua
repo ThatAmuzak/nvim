@@ -27,4 +27,9 @@ require("lazy").setup({
 	require("plugins.which-key"),
 	require("plugins.lazygit"),
 	require("plugins.ibl"),
+	require("plugins.autopairs"),
+	require("plugins.colorizer"),
+	require("plugins.git-integration"),
+	require("plugins.todo-comments"),
+	require("plugins.vim-sleuth"),
 })

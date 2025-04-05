@@ -20,3 +20,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank({ timeout = 200 })
 	end,
 })
+vim.opt.shell = "pwsh"
+vim.opt.shellcmdflag = "-NoLogo -ExecutionPolicy RemoteSigned -Command"
+vim.opt.shellquote = ""
+vim.opt.shellxquote = ""

@@ -19,7 +19,8 @@ map("n", "<C-u>", "<C-u>zz", "Scroll up and center")
 map("n", "n", "nzzzv", "Next search result centered")
 map("n", "N", "Nzzzv", "Previous search result centered")
 map("n", "d;", "d$", "Delete until end of line")
-
+map("n", "nl", "o<Esc>k", "Enter newline below")
+map("n", "NL", "O<Esc>j", "Enter newline above")
 -- Window resizing
 map("n", "<Up>", ":resize -2<CR>", "Resize window up")
 map("n", "<Down>", ":resize +2<CR>", "Resize window down")

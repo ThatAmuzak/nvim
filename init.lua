@@ -33,3 +33,6 @@ require("lazy").setup({
 	require("plugins.todo-comments"),
 	require("plugins.vim-sleuth"),
 })
+
+
+require("plugins.terminal")

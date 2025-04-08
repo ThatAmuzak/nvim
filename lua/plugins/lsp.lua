@@ -66,7 +66,7 @@ return {
 				-- WARN: This is not Goto Definition, this is Goto Declaration.
 				--  For example, in C this would take you to the header.
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-
+				map("<space>f", "<cmd>lua vim.lsp.buf.format()<CR>", "[F]ormat")
 				-- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
 				---@param client vim.lsp.Client
 				---@param method vim.lsp.protocol.Method
@@ -164,9 +164,18 @@ return {
 		--  By default, Neovim doesn't support everything that is in the LSP specification.
 		--  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
 		--  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+		-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+		-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
+		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		local capabilities = cmp_nvim_lsp.default_capabilities()
+		capabilities = vim.tbl_deep_extend("force", capabilities, {
+			workspace = {
+				didChangeWatchedFiles = {
+					dynamicRegistration = true,
+				},
+			},
+		})
 		-- Enable the following language servers
 		--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 		--
@@ -189,6 +198,12 @@ return {
 			-- But for many setups, the LSP (`ts_ls`) will work just fine
 			-- ts_ls = {},
 			--
+
+			omnisharp = {
+				settings = {
+					useModernNet = false,
+				},
+			},
 
 			lua_ls = {
 				-- cmd = {...},
@@ -231,6 +246,7 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
+			"csharpier",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

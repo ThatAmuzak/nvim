@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	require("plugins.neotree"),
+	-- require("plugins.neotree"),
 	require("plugins.catppuccin"),
 	require("plugins.lualine"),
 	require("plugins.treesitter"),
@@ -32,7 +32,7 @@ require("lazy").setup({
 	require("plugins.git-integration"),
 	require("plugins.todo-comments"),
 	require("plugins.vim-sleuth"),
+	require("plugins.oil"),
 })
-
 
 require("plugins.terminal")

@@ -22,7 +22,7 @@ map("n", "G", "Gzzzv", "End of file centered")
 map("n", "d;", "d$", "Delete until end of line")
 map("n", "<leader>nl", "o<Esc>k", "Enter newline below")
 map("n", "<leader>NL", "O<Esc>j", "Enter newline above")
-map("n", "<leader>A", "<cmd>Alpha", "Launch alpha")
+map("n", "<leader>A", "<cmd>Alpha<CR>", "Launch alpha")
 map("n", "<leader>a", "ggVG", "Select all lines")
 
 -- Window resizing

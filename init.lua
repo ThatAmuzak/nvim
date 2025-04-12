@@ -34,6 +34,8 @@ require("lazy").setup({
 	require("plugins.oil"),
 	require("plugins.gitblame"),
 	require("plugins.flash"),
+	require("plugins.markdown"),
+	require("plugins.smearcursor"),
 })
 
 require("plugins.terminal")

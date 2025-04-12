@@ -15,10 +15,8 @@ return {
 				"stylua", -- lua formatter
 				"eslint_d", -- ts/js linter
 				"gofmt", -- Go formatter
-				-- "omnisharp", -- C# Formatter
-				"black", -- python formatter
 				"google-java-format",
-				"csharper",
+				"csharpier",
 			},
 			automatic_installation = true,
 		})

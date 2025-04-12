@@ -33,6 +33,7 @@ require("lazy").setup({
 	require("plugins.vim-sleuth"),
 	require("plugins.oil"),
 	require("plugins.gitblame"),
+	require("plugins.flash"),
 })
 
 require("plugins.terminal")

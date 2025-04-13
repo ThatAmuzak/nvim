@@ -24,6 +24,7 @@ return {
 		local sources = {
 			formatting.prettier.with({ filetypes = { "html", "json", "yaml", "markdown" } }),
 			formatting.stylua,
+			formatting.gofmt,
 		}
 
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

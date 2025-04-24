@@ -13,6 +13,8 @@ map("n", "<leader>ww", "<cmd> wa <CR>", "Save file")
 map("n", "<leader>qq", "<cmd> wqa <CR>", "Save all and quit")
 
 -- Editing enhancements
+map("n", "j", "gj", "Move visual line down")
+map("n", "k", "gk", "Move visual line up")
 map("n", "x", '"_x', "Delete character without yanking")
 map("n", "<C-d>", "<C-d>zz", "Scroll down and center")
 map("n", "<C-u>", "<C-u>zz", "Scroll up and center")

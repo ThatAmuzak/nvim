@@ -36,6 +36,7 @@ require("lazy").setup({
 	require("plugins.flash"),
 	require("plugins.markdown"),
 	require("plugins.smearcursor"),
+	require("plugins.trouble"),
 })
 
 require("plugins.terminal")

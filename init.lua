@@ -37,6 +37,7 @@ require("lazy").setup({
 	require("plugins.markdown"),
 	require("plugins.smearcursor"),
 	require("plugins.trouble"),
+	require("plugins.avante"),
 })
 
 require("plugins.terminal")

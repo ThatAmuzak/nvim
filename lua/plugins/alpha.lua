@@ -5,15 +5,6 @@ return {
 		local dashboard = require("alpha.themes.dashboard")
 
 		dashboard.section.header.val = {
-			[[                                                                       ]],
-			[[                                                                       ]],
-			[[                                                                       ]],
-			[[                                                                       ]],
-			[[                                                                       ]],
-			[[                                                                       ]],
-			[[                                                                       ]],
-			[[                                                                       ]],
-			[[                                                                       ]],
 			[[                                                                     ]],
 			[[       ████ ██████           █████      ██                     ]],
 			[[      ███████████             █████                             ]],
@@ -22,10 +13,6 @@ return {
 			[[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
 			[[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
 			[[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
-			[[                                                                       ]],
-			[[                                                                       ]],
-			[[                                                                       ]],
-			[[                                                                       ]],
 		}
 
 		dashboard.section.buttons.val = {
@@ -35,6 +22,13 @@ return {
 			dashboard.button("t", "󱄽  Find text", ":Telescope live_grep <CR>"),
 			dashboard.button("c", "  Configuration", ":cd ~/.config/nvim | e init.lua<CR>"),
 			dashboard.button("q", "󰈆  Quit Neovim", ":qa<CR>"),
+		}
+		dashboard.config.layout = {
+			{ type = "padding", val = 13 },
+			dashboard.section.header,
+			{ type = "padding", val = 5 },
+			dashboard.section.buttons,
+			{ type = "padding", val = 5 },
 		}
 		dashboard.section.header.opts = {
 			hl = "AlphaHeader",

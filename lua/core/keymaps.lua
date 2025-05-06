@@ -40,7 +40,7 @@ map("v", "p", '"_dP', "Paste without overwriting register")
 
 -- LSP hover
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", "LSP Hover")
-
+map("n", "E", vim.diagnostic.open_float, "Show Error on Line")
 -- Window management
 map("n", "<leader>v", "<C-w>v", "Split window vertically")
 map("n", "<leader>h", "<C-w>s", "Split window horizontally")

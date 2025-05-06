@@ -29,7 +29,7 @@ return {
 	},
 	keys = {
 		{
-			"<leader>zf",
+			"<leader>ff",
 			mode = { "n", "x", "o" },
 			function()
 				require("flash").jump()

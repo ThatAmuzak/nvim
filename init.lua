@@ -38,6 +38,8 @@ require("lazy").setup({
 	require("plugins.smearcursor"),
 	require("plugins.trouble"),
 	require("plugins.avante"),
+	require("plugins.orgmode"),
+	require("plugins.orgmode-bullets"),
 })
 
 require("plugins.terminal")

@@ -25,3 +25,5 @@ vim.opt.shellcmdflag = "-NoLogo -ExecutionPolicy RemoteSigned -Command"
 vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
 vim.opt.termguicolors = true
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = ""

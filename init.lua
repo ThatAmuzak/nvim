@@ -40,6 +40,7 @@ require("lazy").setup({
 	require("plugins.avante"),
 	require("plugins.orgmode"),
 	require("plugins.orgmode-bullets"),
+	require("plugins.orgroam"),
 })
 
 require("plugins.terminal")

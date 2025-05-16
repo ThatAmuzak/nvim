@@ -27,6 +27,11 @@ return {
 			},
 		},
 	},
+	modes = {
+		char = {
+			enabled = false,
+		},
+	},
 	keys = {
 		{
 			"<leader>ff",

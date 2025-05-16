@@ -11,6 +11,7 @@ end
 -- Save and quit
 map("n", "<leader>ww", "<cmd> wa <CR>", "Save file")
 map("n", "<leader>qq", "<cmd> wqa <CR>", "Save all and quit")
+map("n", "<leader>bb", ":b#<bar>bd#<CR>", "Close buffer and return")
 
 -- Editing enhancements
 map("n", "j", "gj", "Move visual line down")

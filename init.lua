@@ -42,6 +42,7 @@ require("lazy").setup({
 	require("plugins.orgmode-bullets"),
 	require("plugins.orgroam"),
 	require("plugins.vimtex"),
+	require("plugins.yanky"),
 })
 
 require("plugins.terminal")

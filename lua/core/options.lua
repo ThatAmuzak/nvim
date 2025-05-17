@@ -27,3 +27,4 @@ vim.opt.shellxquote = ""
 vim.opt.termguicolors = true
 vim.opt.conceallevel = 2
 vim.opt.concealcursor = ""
+vim.opt.linebreak = true

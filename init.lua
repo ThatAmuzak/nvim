@@ -41,6 +41,7 @@ require("lazy").setup({
 	require("plugins.orgmode"),
 	require("plugins.orgmode-bullets"),
 	require("plugins.orgroam"),
+	require("plugins.vimtex"),
 })
 
 require("plugins.terminal")

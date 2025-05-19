@@ -156,6 +156,7 @@ return { -- Autocompletion
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
+				{ name = "vimtex" },
 			},
 			formatting = {
 				fields = { "kind", "abbr", "menu" },

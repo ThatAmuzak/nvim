@@ -22,9 +22,24 @@ return {
 		-- Useful for getting pretty icons, but requires a Nerd Font.
 		{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 		{
-			"jmbuhr/telescope-zotero.nvim",
+
+			"ThatAmuzak/telescope-zotero.nvim",
+			url = "https://github.com/ThatAmuzak/telescope-zotero.nvim",
+			branch = "better-bib-fetch",
 			dependencies = {
 				{ "kkharji/sqlite.lua" },
+			},
+			opts = {
+				ft = {
+					tex = {
+						insert_key_formatter = function(citekey)
+							return "\\cite{" .. citekey .. "}"
+						end,
+						locate_bib = function()
+							return vim.fn.getcwd() .. "/References/refs.bib"
+						end,
+					},
+				},
 			},
 			config = function()
 				require("zotero").setup()

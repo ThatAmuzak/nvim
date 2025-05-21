@@ -16,6 +16,8 @@ map("n", "<leader>bb", ":b#<bar>bd#<CR>", "Close buffer and return")
 -- Editing enhancements
 map("n", "j", "gj", "Move visual line down")
 map("n", "k", "gk", "Move visual line up")
+map("v", "j", "gj", "Move visual line down")
+map("v", "k", "gk", "Move visual line up")
 map("n", "x", '"_x', "Delete character without yanking")
 map("n", "<C-d>", "<C-d>zz", "Scroll down and center")
 map("n", "<C-u>", "<C-u>zz", "Scroll up and center")

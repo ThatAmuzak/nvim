@@ -4,6 +4,14 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = { theme = "powerline_dark" },
+			sections = {
+				lualine_c = {
+					{
+						"filename",
+						path = 1,
+					},
+				},
+			},
 		})
 	end,
 }

@@ -13,6 +13,7 @@ return {
 
 		-- Allows extra capabilities provided by nvim-cmp
 		"hrsh7th/cmp-nvim-lsp",
+		"Hoffs/omnisharp-extended-lsp.nvim",
 	},
 	config = function()
 		-- Brief aside: **What is LSP?**
@@ -163,7 +164,21 @@ return {
 			--
 			-- But for many setups, the LSP (`tsserver`) will work just fine
 			ltex = {},
-			omnisharp = {},
+			omnisharp = {
+				cmd = {
+					"dotnet",
+					vim.fn.expand("~/.config/nvim-data/mason/packages/omnisharp/libexec/OmniSharp.dll"),
+					"--languageserver",
+					"--hostPID",
+					tostring(vim.fn.getpid()),
+				},
+				enable_editorconfig_support = true,
+				enable_ms_build_load_projects_on_demand = false,
+				enable_roslyn_analyzers = true,
+				organize_imports_on_format = true,
+				enable_import_completion = true,
+				sdk_include_prereleases = true,
+			},
 			ts_ls = {}, -- tsserver is deprecated
 			ruff = {},
 			jdtls = {},

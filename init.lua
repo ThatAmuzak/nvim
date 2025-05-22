@@ -44,6 +44,7 @@ require("lazy").setup({
 	require("plugins.vimtex"),
 	require("plugins.yanky"),
 	require("plugins.ltex-extras"),
+	require("plugins.copilot"),
 })
 
 require("plugins.terminal")

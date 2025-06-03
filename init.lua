@@ -45,6 +45,7 @@ require("lazy").setup({
 	require("plugins.yanky"),
 	require("plugins.ltex-extras"),
 	require("plugins.copilot"),
+	require("plugins.local-highlight"),
 })
 
 require("plugins.terminal")

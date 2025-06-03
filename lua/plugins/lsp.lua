@@ -163,7 +163,11 @@ return {
 			--    https://github.com/pmizio/typescript-tools.nvim
 			--
 			-- But for many setups, the LSP (`tsserver`) will work just fine
-			ltex = {},
+			ltex = {
+				flags = {
+					debounce_text_changes = 1000, -- Adjust the delay (in milliseconds) as needed
+				},
+			},
 			omnisharp = {
 				cmd = {
 					"dotnet",

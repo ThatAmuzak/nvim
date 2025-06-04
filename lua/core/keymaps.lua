@@ -56,3 +56,17 @@ map("n", "<C-l>", ":wincmd l<CR>", "Move to window right")
 
 -- Clear search highlight
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", "Clear search highlight")
+
+map("n", "<leader>sif", function()
+	vim.fn.setreg("/", "\\<" .. vim.fn.expand("<cword>") .. "\\>")
+	vim.cmd("normal! n")
+end, "Search word under cursor")
+
+map("v", "<leader>sif", function()
+	local saved_reg = vim.fn.getreg('"')
+	vim.cmd('normal! "vy') -- yank visual selection into "v
+	local selection = vim.fn.getreg("v"):gsub("[\n\r]", "") -- get and clean it
+	vim.fn.setreg("/", vim.fn.escape(selection, "\\/")) -- set search register
+	vim.fn.setreg('"', saved_reg) -- restore unnamed register
+	vim.cmd("normal! n")
+end, "Search visual selection")

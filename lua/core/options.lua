@@ -29,3 +29,5 @@ vim.opt.conceallevel = 2
 vim.opt.concealcursor = ""
 vim.opt.linebreak = true
 vim.g.sqlite_clib_path = vim.fn.expand("~\\Frameworks\\sqlite\\sqlite3.dll")
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"

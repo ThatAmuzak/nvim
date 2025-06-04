@@ -40,7 +40,7 @@ return { -- Autocompletion
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 		luasnip.config.setup({})
-		luasnip.filetype_extend("cs", { "unity" })
+		luasnip.filetype_extend("cs", { "unity", "csharpdoc" })
 
 		local kind_icons = {
 			Text = "󰉿",

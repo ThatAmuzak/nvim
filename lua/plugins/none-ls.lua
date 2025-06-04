@@ -30,7 +30,9 @@ return {
 			formatting.stylua,
 			formatting.gofmt,
 			formatting.goimports,
-			formatting.csharpier,
+			formatting.csharpier.with({
+				extra_args = { "--config", ".csharpierrc" },
+			}),
 			formatting.google_java_format,
 			require("none-ls.formatting.ruff").with({ extra_args = { "--extend-select", "I" } }),
 			require("none-ls.formatting.ruff_format"),

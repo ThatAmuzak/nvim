@@ -58,7 +58,6 @@ return {
 						["<C-l>"] = require("telescope.actions").select_default, -- open file
 					},
 				},
-				layout_config = { preview_width = 0.75 },
 			},
 			pickers = {
 				find_files = {

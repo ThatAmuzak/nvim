@@ -31,3 +31,22 @@ vim.opt.linebreak = true
 vim.g.sqlite_clib_path = vim.fn.expand("~\\Frameworks\\sqlite\\sqlite3.dll")
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"
+vim.api.nvim_create_user_command("CdToGitRoot", function()
+	local filepath = vim.fn.expand("%:p")
+	local dir = vim.fn.fnamemodify(filepath, ":h")
+
+	while dir ~= "/" do
+		if vim.fn.isdirectory(dir .. "/.git") == 1 then
+			vim.cmd("cd " .. dir)
+			print("Changed directory to git root: " .. dir)
+			return
+		end
+		dir = vim.fn.fnamemodify(dir, ":h")
+	end
+
+	-- fallback to file's directory
+	local fallback = vim.fn.fnamemodify(filepath, ":h")
+	vim.cmd("cd " .. fallback)
+	print("No git root found. Changed directory to file location: " .. fallback)
+end, {})
+vim.keymap.set("n", "<leader>cdpr", ":CdToGitRoot<CR>", { desc = "CD to project root" })

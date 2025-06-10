@@ -24,7 +24,9 @@ return {
 		require("oil").setup({
 			keymaps = {
 				["<BS>"] = "actions.parent",
-				["-"] = "",
+				["-"] = false,
+				["<C-h>"] = false,
+				["<C-l>"] = false,
 			},
 			win_options = {
 				winbar = "%!v:lua.get_oil_winbar()",

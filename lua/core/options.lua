@@ -49,3 +49,7 @@ vim.api.nvim_create_user_command("CdToGitRoot", function()
 	vim.cmd("cd " .. fallback)
 	print("No git root found. Changed directory to file location: " .. fallback)
 end, {})
+function ToggleSpell()
+	vim.wo.spell = not vim.wo.spell
+end
+vim.api.nvim_create_user_command("ToggleSpell", ToggleSpell, {})

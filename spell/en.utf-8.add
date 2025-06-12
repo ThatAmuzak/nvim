@@ -43,3 +43,10 @@ useTabs
 indentSize
 endOfLine
 Phalange
+DataRecords
+HPUIRayCastDetectionBaseLogic
+RaycastDataRecord
+HPUIInteractorRayAngle
+ConeRayComputationDataRecord
+TargetSegment
+phalange

@@ -58,6 +58,10 @@ return {
 						["<C-l>"] = require("telescope.actions").select_default, -- open file
 					},
 				},
+				sorting_strategy = "ascending",
+				layout_config = {
+					prompt_position = "top",
+				},
 			},
 			pickers = {
 				find_files = {

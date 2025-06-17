@@ -38,9 +38,6 @@ require("lazy").setup({
 	require("plugins.smearcursor"),
 	require("plugins.trouble"),
 	require("plugins.avante"),
-	require("plugins.orgmode"),
-	require("plugins.orgmode-bullets"),
-	require("plugins.orgroam"),
 	require("plugins.vimtex"),
 	require("plugins.yanky"),
 	require("plugins.ltex-extras"),
@@ -48,6 +45,7 @@ require("lazy").setup({
 	require("plugins.local-highlight"),
 	require("plugins.trim"),
 	require("plugins.ufo"),
+	require("plugins.neorg"),
 })
 
 require("plugins.terminal")

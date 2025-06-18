@@ -22,6 +22,7 @@ return {
 			end
 		end
 		require("oil").setup({
+			columns = { "icon", default_file = " " },
 			keymaps = {
 				["<BS>"] = "actions.parent",
 				["-"] = false,

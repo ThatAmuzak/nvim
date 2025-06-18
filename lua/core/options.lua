@@ -53,3 +53,4 @@ function ToggleSpell()
 	vim.wo.spell = not vim.wo.spell
 end
 vim.api.nvim_create_user_command("ToggleSpell", ToggleSpell, {})
+vim.api.nvim_create_user_command("SpellToggle", ToggleSpell, {}) -- cuz I keep forgetting which word is first lmao

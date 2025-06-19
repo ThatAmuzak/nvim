@@ -69,3 +69,23 @@ map("v", "<leader>sif", function()
 	vim.fn.setreg('"', saved_reg) -- restore unnamed register
 	vim.cmd("normal! n")
 end, "Search visual selection")
+
+local function replace_visual_selection()
+	local saved_reg = vim.fn.getreg('"')
+	vim.cmd('normal! "vy')
+	local sel = vim.fn.getreg("v"):gsub("[\n\r]", "")
+	vim.fn.setreg('"', saved_reg)
+
+	vim.ui.input({ prompt = ("Replace %q with: "):format(sel) }, function(input)
+		if not input then
+			return
+		end
+
+		local cmd = string.format("%%s/%s/%s/gc", vim.fn.escape(sel, "\\/"), input)
+		vim.cmd(cmd)
+	end)
+end
+
+vim.keymap.set("v", "<leader>rif", function()
+	replace_visual_selection()
+end, { desc = "Replace visual selection interactively" })

@@ -59,8 +59,11 @@ return {
 					},
 				},
 				sorting_strategy = "ascending",
+				layout_strategy = "vertical",
 				layout_config = {
 					prompt_position = "top",
+					preview_cutoff = 0,
+					mirror = true,
 				},
 			},
 			pickers = {

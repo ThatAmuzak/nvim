@@ -28,6 +28,7 @@ map("n", "<leader>nl", "o<Esc>k", "Enter newline below")
 map("n", "<leader>NL", "O<Esc>j", "Enter newline above")
 map("n", "<leader>A", "<cmd>Alpha<CR>", "Launch alpha")
 map("n", "<leader>a", "ggVG", "Select all lines")
+map("n", "<leader>i", "gg=G", "Indent all lines")
 
 -- Window resizing
 map("n", "<Up>", ":resize -2<CR>", "Resize window up")
@@ -43,6 +44,7 @@ map("v", "p", '"_dP', "Paste without overwriting register")
 -- LSP hover
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", "LSP Hover")
 map("n", "E", vim.diagnostic.open_float, "Show Error on Line")
+
 -- Window management
 map("n", "<leader>v", "<C-w>v", "Split window vertically")
 map("n", "<leader>h", "<C-w>s", "Split window horizontally")

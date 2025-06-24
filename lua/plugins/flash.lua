@@ -53,6 +53,11 @@ return {
 	config = function()
 		require("flash").setup({
 			setupCustomHighlightGroup(),
+			modes = {
+				char = {
+					enabled = false,
+				},
+			},
 		})
 	end,
 }

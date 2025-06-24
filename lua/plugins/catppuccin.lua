@@ -8,7 +8,7 @@ return {
 	},
 	config = function()
 		require("catppuccin").setup({
-			no_italic = true,
+			no_italic = false,
 		})
 		vim.cmd.colorscheme("catppuccin")
 		vim.cmd([[

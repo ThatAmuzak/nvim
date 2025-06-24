@@ -7,6 +7,14 @@ return {
 			load = {
 				["core.defaults"] = {},
 				["core.concealer"] = {},
+				["core.dirman"] = {
+					config = {
+						workspaces = {
+							notes = "~/Notes/Brain2/",
+						},
+						default_workspace = "notes",
+					},
+				},
 			},
 		})
 	end,

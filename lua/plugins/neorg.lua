@@ -15,6 +15,8 @@ return {
 						default_workspace = "notes",
 					},
 				},
+				["core.completion"] = { config = { engine = "nvim-cmp" } },
+				["core.integrations.nvim-cmp"] = {},
 			},
 			vim.keymap.set("n", "<leader>ntt", "<Plug>(neorg.qol.todo-items.todo.task-cycle)"),
 			vim.keymap.set("n", "<leader>nta", "<Plug>(neorg.qol.todo-items.todo.task-ambiguous)"),
@@ -24,6 +26,13 @@ return {
 			vim.keymap.set("n", "<leader>ntp", "<Plug>(neorg.qol.todo-items.todo.task-pending)"),
 			vim.keymap.set("n", "<leader>ntr", "<Plug>(neorg.qol.todo-items.todo.task-recurring)"),
 			vim.keymap.set("n", "<leader>ntu", "<Plug>(neorg.qol.todo-items.todo.task-undone)"),
+		})
+
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = "norg",
+			callback = function()
+				vim.opt_local.spell = false
+			end,
 		})
 	end,
 }

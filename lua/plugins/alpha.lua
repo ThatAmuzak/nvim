@@ -16,10 +16,12 @@ return {
 		}
 
 		dashboard.section.buttons.val = {
-			dashboard.button("f", "󰮗  Find file", ":Telescope find_files <CR>"),
-			dashboard.button("n", "  New file", ":enew<CR>"),
+			dashboard.button("f", "󰮗  Find File", ":Telescope find_files <CR>"),
+			dashboard.button("n", "  New File", ":enew<CR>"),
 			dashboard.button("e", "󰙅  Open Oil", "<Cmd>Oil<CR>"),
-			dashboard.button("t", "󱄽  Find text", ":Telescope live_grep <CR>"),
+			dashboard.button("t", "󱄽  Find Text", ":Telescope live_grep <CR>"),
+			dashboard.button("d", "󰂺 Open Journal", ":Neorg journal today <CR>"),
+			dashboard.button("i", "󰧑  Open Index", ":Neorg index <CR>"),
 			dashboard.button("c", "  Configuration", ":cd ~/.config/nvim | e init.lua<CR>"),
 			dashboard.button("q", "󰈆  Quit Neovim", ":qa<CR>"),
 		}

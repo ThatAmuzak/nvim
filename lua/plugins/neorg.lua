@@ -2,8 +2,13 @@ return {
 	"nvim-neorg/neorg",
 	lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
 	version = "*", -- Pin Neorg to the latest stable release
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-neorg/neorg-telescope",
+	},
 	config = function()
 		require("neorg").setup({
+
 			load = {
 				["core.defaults"] = {},
 				["core.concealer"] = {},
@@ -15,8 +20,9 @@ return {
 						default_workspace = "notes",
 					},
 				},
-				["core.completion"] = { config = { engine = "nvim-cmp" } },
+				["core.completion"] = { config = { engine = "nvim-cmp" }, name = "[Neorg]" },
 				["core.integrations.nvim-cmp"] = {},
+				["core.integrations.telescope"] = {},
 			},
 			vim.keymap.set("n", "<leader>ntt", "<Plug>(neorg.qol.todo-items.todo.task-cycle)"),
 			vim.keymap.set("n", "<leader>nta", "<Plug>(neorg.qol.todo-items.todo.task-ambiguous)"),
@@ -26,6 +32,8 @@ return {
 			vim.keymap.set("n", "<leader>ntp", "<Plug>(neorg.qol.todo-items.todo.task-pending)"),
 			vim.keymap.set("n", "<leader>ntr", "<Plug>(neorg.qol.todo-items.todo.task-recurring)"),
 			vim.keymap.set("n", "<leader>ntu", "<Plug>(neorg.qol.todo-items.todo.task-undone)"),
+			vim.keymap.set("n", "<leader>nif", "<Plug>(neorg.telescope.insert_file_link)"),
+			vim.keymap.set("n", "<leader>nil", "<Plug>(neorg.telescope.insert_link)"),
 		})
 
 		vim.api.nvim_create_autocmd("FileType", {

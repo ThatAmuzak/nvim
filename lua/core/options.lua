@@ -49,6 +49,15 @@ vim.api.nvim_create_user_command("CdToGitRoot", function()
 	vim.cmd("cd " .. fallback)
 	print("No git root found. Changed directory to file location: " .. fallback)
 end, {})
+
+vim.api.nvim_create_user_command("CdToCurrentDirectory", function()
+	local filepath = vim.fn.expand("%:p")
+	local dir = vim.fn.fnamemodify(filepath, ":h")
+
+	vim.cmd("cd " .. dir)
+	print("Changed directory to file location: " .. dir)
+end, {})
+
 function ToggleSpell()
 	vim.wo.spell = not vim.wo.spell
 end

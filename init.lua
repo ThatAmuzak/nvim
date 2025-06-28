@@ -45,6 +45,7 @@ require("lazy").setup({
 	require("plugins.trim"),
 	require("plugins.ufo"),
 	require("plugins.neorg"),
+	require("plugins.conjure"),
 })
 
 require("plugins.terminal")

@@ -46,6 +46,7 @@ require("lazy").setup({
 	require("plugins.ufo"),
 	require("plugins.neorg"),
 	require("plugins.conjure"),
+	require("plugins.no-neck-pain"),
 })
 
 require("plugins.terminal")
